@@ -10,4 +10,21 @@
   .brand {
     background: #ef4f5f;
   }
+
+  .container {
+    padding: 1rem 5rem;
+  }
+
+  .brandBanner {
+    background-color: rgb(197, 197, 197);
+    background-image: url(https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png);
+    width: 100%;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5rem 0rem;
+    background-position: center;
+    top: 0;
+    color: white;
+  }
 }

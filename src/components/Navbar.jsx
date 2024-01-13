@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { FiAlignJustify } from "react-icons/fi";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between p-3">
-      <div>
+    <nav className="flex justify-between container">
+      <div className="block sm:hidden">
         <FiAlignJustify size={30} color="green" />
       </div>
       <div className="hidden sm:block">Get App</div>
-      <ul className="hidden sm:flex">
-        <li>Investor Relation</li>
-        <li>Add Restaurant</li>
-        <li>Login</li>
-        <li>Signup</li>
+      <ul className="hidden sm:flex gap-2">
+        <li><Link to="/">Investor Relation</Link></li>
+        <li><Link to="/">Add Restaurant</Link></li>
+        <li><Link to="/">Login</Link></li>
+        <li><Link to="/register">Signup</Link></li>
       </ul>
     </nav>
   );
