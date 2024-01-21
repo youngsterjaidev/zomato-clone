@@ -4,7 +4,7 @@ import axios from "axios"
 import { useParams } from "react-router-dom"
 import RNavbar from "../components/RNavbar"
 
-const URI = "http://192.168.31.104:8000";
+const URI = "https://zomato-clone-cqmtcf7cm-youngsterjaidev.vercel.app";
 
 const Restaurant = () => {
   const params = useParams()

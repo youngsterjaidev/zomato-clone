@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Service from "../components/Service";
 import { Link } from "react-router-dom"
 
-const URI = "http://192.168.31.104:8000"
+const URI = "https://zomato-clone-cqmtcf7cm-youngsterjaidev.vercel.app"
 
 const Card = (props) => {
   return (
