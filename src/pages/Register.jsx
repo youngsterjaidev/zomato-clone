@@ -12,7 +12,7 @@ const Register = () => {
       //prevent page from reloading
       e.preventDefault();
       console.log(email, password);
-      const response = await axios("http://10.200.189.21:8000/register", {
+      const response = await axios("https://zomato-clone-phi-nine.vercel.app/register", {
         method: "POST",
         header: {
           "Content-Type": "application/json",
