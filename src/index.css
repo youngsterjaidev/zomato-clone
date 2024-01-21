@@ -27,4 +27,28 @@
     top: 0;
     color: white;
   }
+
+  .galleryContainer {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+  }
+
+  .galleryContainer > * {
+    width: 100%;
+    height: 100%;
+  }
+
+  .galleryContainer > *:nth-of-type(1) {
+    grid-column: 1/4;
+    grid-row: 1/3;
+  }
+
+  .galleryContainer > *:nth-of-type(3) {
+    grid-row-start: 2;
+  }
+
+  .galleryContainer > *:nth-of-type(4) {
+    grid-row: 1/3;
+  }
 }

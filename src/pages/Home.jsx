@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"
 import Navbar from "../components/Navbar";
 import Service from "../components/Service";
+import { Link } from "react-router-dom"
+
+const URI = "http://192.168.31.104:8000"
 
 const Card = (props) => {
   return (
@@ -31,7 +34,7 @@ const Home = () => {
     try {
       if(data === "") {
         // show all data
-        const res = await axios.get(`http://192.168.220.7:8000/restaurants`)
+        const res = await axios.get(`${URI}/restaurants`)
 
       console.log("The Response : ", res)
 
@@ -39,7 +42,7 @@ const Home = () => {
         return
       }
 
-      const res = await axios.get(`http://192.168.220.7:8000/restaurants/${data}`);
+      const res = await axios.get(`${URI}/restaurants/${data}`);
 
       console.log("The Response : ", res)
 
@@ -135,12 +138,14 @@ const Home = () => {
         ) : (
           result.map((item) => {
             return (
+              <Link to={`/restaurant/${item.rname}`}>
               <Card
                 rname={item.rname}
                 price={item.price}
                 imgdata={item.imgdata}
                 desc={item.somedata}
               />
+              </Link>
             );
           })
         )}
