@@ -4,7 +4,7 @@ import axios from "axios"
 import { useParams } from "react-router-dom"
 import RNavbar from "../components/RNavbar"
 
-const URI = "https://zomato-clone-phi-nine.vercel.app";
+const URI = import.meta.env.SERVER_URI || "http://localhost:8000"
 
 const Restaurant = () => {
   const params = useParams()

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+const URI = import.meta.env.SERVER_URI || "http://localhost:8000"
+
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +14,7 @@ const Register = () => {
       //prevent page from reloading
       e.preventDefault();
       console.log(email, password);
-      const response = await axios("https://zomato-clone-phi-nine.vercel.app/register", {
+      const response = await axios(`${URI}/register`, {
         method: "POST",
         header: {
           "Content-Type": "application/json",

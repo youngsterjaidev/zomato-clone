@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Service from "../components/Service";
 import { Link } from "react-router-dom"
 
-const URI = "https://zomato-clone-phi-nine.vercel.app"
+const URI = import.meta.env.SERVER_URI || "http://localhost:8000"
 
 const Card = (props) => {
   return (
